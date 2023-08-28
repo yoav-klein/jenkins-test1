@@ -1,4 +1,4 @@
-pipeline {
+/*pipeline {
   agent any
   
   stages {
@@ -10,4 +10,7 @@ pipeline {
     }
   }
   
-}
+}*/
+
+println("HERE")
+sh script: "ls"
