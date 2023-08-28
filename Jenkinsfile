@@ -1,19 +1,11 @@
-/*pipeline {
-  agent any
-  
-  stages {
-    stage('First') {
-      steps {
-        sh script: 'ls; env;exit 0'
-      }
-    }
-  }
-  
-}*/
 
-// checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/yoav-klein/jenkins-test1.git']]])
 
 println("HERE")
 node {
-  sh script: "ls"
+  lock(resource: 'secure-browser') {
+    sh script: "echo start sleeping"
+    sh script: "sleep 30"
+    sh script: "env"
+    sh script: "echo woke up"
+  }
 }
