@@ -14,4 +14,6 @@
 // checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/yoav-klein/jenkins-test1.git']]])
 
 println("HERE")
-sh script: "ls"
+node {
+  sh script: "ls"
+}
