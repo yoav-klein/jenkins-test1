@@ -17,4 +17,7 @@ println("HERE")
 node {
   sh script: "ls"
   sh script: "env"
+  if(env.BRANCH_NAME == "main") {
+    println "MASTER!!!!"
+  }
 }
