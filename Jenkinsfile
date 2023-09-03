@@ -1,4 +1,4 @@
-/*pipeline {
+pipeline {
   agent any
   
   stages {
@@ -9,11 +9,11 @@
     }
   }
   
-}*/
+}
 
 // checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/yoav-klein/jenkins-test1.git']]])
 
-println("HERE")
+/*println("HERE")
 node {
   sh script: "ls"
-}
+}*/
